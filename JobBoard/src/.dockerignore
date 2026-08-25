@@ -1,0 +1,23 @@
+# Build outputs must never enter the image: obj/project.assets.json generated
+# on Windows records host-specific NuGet folders (e.g. C:\Program Files (x86)\...
+# \NuGetPackages as a fallback folder), which breaks ResolvePackageAssets on Linux.
+**/[Bb]in/
+**/[Oo]bj/
+
+# IDE / editor state
+.vs/
+.idea/
+*.user
+*.suo
+
+# Git metadata (not required at build time)
+.git/
+.gitignore
+
+# Documentation
+**/*.md
+
+# Docker configuration itself is not needed inside the image
+**/Dockerfile*
+**/docker-compose*.yml
+**/.dockerignore

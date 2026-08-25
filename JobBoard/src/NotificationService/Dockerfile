@@ -7,7 +7,7 @@ COPY NotificationService/NotificationService.Application/NotificationService.App
 COPY NotificationService/NotificationService.Infrastructure/NotificationService.Infrastructure.csproj NotificationService/NotificationService.Infrastructure/
 COPY NotificationService/NotificationService.Api/NotificationService.Api.csproj NotificationService/NotificationService.Api/
 
-RUN dotnet restore NotificationService/NotificationService.Api/NotificationService.Api.csproj
+RUN dotnet restore NotificationService/NotificationService.Api/NotificationService.Api.csproj -p:Configuration=Release
 
 COPY JobBoard.Contracts/ JobBoard.Contracts/
 COPY NotificationService/ NotificationService/
